@@ -9,8 +9,8 @@ import (
 
 func main() {
 	models.Personalities = []models.Personality{
-		{Name: "Test 1", History: "Test 1"},
-		{Name: "Test 2", History: "Test 2"},
+		{Id: 1, Name: "Test 1", History: "Test 1"},
+		{Id: 2, Name: "Test 2", History: "Test 2"},
 	}
 
 	fmt.Println("Go API Rest")
