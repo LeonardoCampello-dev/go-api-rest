@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 
+	"github.com/LeonardoCampello-dev/go-api-rest/db"
 	"github.com/LeonardoCampello-dev/go-api-rest/models"
 	"github.com/LeonardoCampello-dev/go-api-rest/routes"
 )
@@ -12,6 +13,8 @@ func main() {
 		{Id: 1, Name: "Test 1", History: "Test 1"},
 		{Id: 2, Name: "Test 2", History: "Test 2"},
 	}
+
+	db.ConnectDB()
 
 	fmt.Println("Go API Rest")
 
