@@ -32,3 +32,13 @@ func GetPersonalityById(writer http.ResponseWriter, request *http.Request) {
 
 	json.NewEncoder(writer).Encode(personality)
 }
+
+func CreatePersonality(writer http.ResponseWriter, request *http.Request) {
+	var personality models.Personality
+
+	json.NewDecoder(request.Body).Decode(&personality)
+
+	db.DB.Create(&personality)
+
+	json.NewEncoder(writer).Encode(personality)
+}
